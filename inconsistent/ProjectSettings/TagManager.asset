@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Hazards
+  - Platforms
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1005883567
+    locked: 0
+  - name: Hazards
+    uniqueID: 3011471285
+    locked: 0
+  - name: Platform
+    uniqueID: 1270225091
     locked: 0

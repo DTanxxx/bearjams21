@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField] private BoxCollider2D myFeet = null;
+
     private Rigidbody2D body;
+    private BoxCollider2D myCollider;
     public float speed;
-    public bool onGround;
     public float jumpHeight;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     {
         Move();
         Jump();
+        Die();
     }
 
     void Move()
@@ -30,10 +34,21 @@ public class PlayerScript : MonoBehaviour
 
     void Jump()
     {
+        if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
+            !myFeet.IsTouchingLayers(LayerMask.GetMask("Platforms"))) { return; }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            body.velocity = new Vector2(body.velocity.x, jumpHeight);
-            onGround = false;
+            Debug.Log("Player jumps!");
+            body.velocity += new Vector2(body.velocity.x, jumpHeight);
+        }
+    }
+
+    void Die()
+    {
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) ||
+            myFeet.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+        {
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }

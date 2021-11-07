@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+	bool isPaused = false;
 	// Start is called before the first frame update
 	void Start()
 	{
 		Time.timeScale = 1;
-		isPaused = false;
 	}
 
 	// Update is called once per frame

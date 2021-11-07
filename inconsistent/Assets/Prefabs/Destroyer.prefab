@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7072447871991016998}
   - component: {fileID: 7072447871991016999}
   - component: {fileID: 7072447871991016992}
-  - component: {fileID: 3788804790129170709}
+  - component: {fileID: 7201130233276873659}
   m_Layer: 0
   m_Name: Destroyer
   m_TagString: Untagged
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -260060427
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 4021284656184010451, guid: 80715ffda8fa8154a9a0defe585ee4b0,
     type: 3}
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3788804790129170709
+--- !u!114 &7201130233276873659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3c35a8e2c403b4a9203cff295a95ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementRate: 5

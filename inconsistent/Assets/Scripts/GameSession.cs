@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-    public void ProcessPlayerDeath()
+    public virtual void ProcessPlayerDeath()
     {
         Debug.Log("Player died!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

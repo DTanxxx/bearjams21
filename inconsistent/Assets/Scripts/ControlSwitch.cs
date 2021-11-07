@@ -8,7 +8,7 @@ public class ControlSwitch : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //collision.gameObject.GetComponent<PlayerScript>().SwitchControl();
+            collision.gameObject.GetComponent<PlayerScript>().SwitchControl();
             Destroy(gameObject);
         }
     }

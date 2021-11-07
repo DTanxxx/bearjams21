@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     public float jumpHeight;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         body = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
@@ -23,13 +23,13 @@ public class PlayerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         Move();
         Die();
     }
 
-    private void Move()
+    protected void Move()
     {
         if (keyCodes[0] == KeyCode.LeftArrow && keyCodes[2] == KeyCode.RightArrow)
         {
@@ -183,7 +183,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) ||
             myFeet.IsTouchingLayers(LayerMask.GetMask("Hazards")))

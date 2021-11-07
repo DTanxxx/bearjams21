@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
 	void Start()
 	{
 		Time.timeScale = 1;
+		isPaused = false;
 	}
 
 	// Update is called once per frame
@@ -21,18 +22,25 @@ public class Pause : MonoBehaviour
 			{
 				Time.timeScale = 0;
 				AudioListener.pause = true;
+				isPaused = true;
 			}
 			else if (Time.timeScale == 0)
 			{
 				Debug.Log("unpause");
 				Time.timeScale = 1;
 				AudioListener.pause = false;
+				isPaused = false;
 			}
 		}
 
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.R) && isPaused == true)
 		{
 			Restart();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
+		{
+			Application.Quit();
 		}
 	}
 

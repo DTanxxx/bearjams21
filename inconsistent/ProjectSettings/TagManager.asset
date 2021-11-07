@@ -50,3 +50,6 @@ TagManager:
   - name: Platform
     uniqueID: 1270225091
     locked: 0
+  - name: Destroyer
+    uniqueID: 4034906869
+    locked: 0

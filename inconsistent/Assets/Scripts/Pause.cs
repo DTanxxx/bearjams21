@@ -48,11 +48,15 @@ public class Pause : MonoBehaviour
 	public void Restart()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		isPaused = false;
+		AudioListener.pause = false;
 	}
 
 	// load other level
 	public void LoadLevel(string level)
 	{
+		isPaused = false;
+		AudioListener.pause = false;
 		SceneManager.LoadScene(level);
 	}
 }

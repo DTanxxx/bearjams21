@@ -12,12 +12,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 44950977e0aa78b4b8c03d4ff7cc9514
   - enabled: 1
+    path: Assets/Scenes/Level1Intro.unity
+    guid: 7e4b99328bd1a0a42924cfc3374a7a19
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 8dff25dfc8168494fa0c8d29b607eccb
   - enabled: 1
-    path: Assets/Scenes/Scene2.unity
-    guid: f8cf7de1c38dd0f46a025120b06a8388
+    path: Assets/Scenes/Level1Congrats.unity
+    guid: ea93a22ef37da2940a8f7a4d9a856ea5
+  - enabled: 1
+    path: Assets/Scenes/Level3Intro.unity
+    guid: 69102d80eeae30e4a94b7129c7879a81
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 1388931a7607748408a1b7141607b269
+  - enabled: 1
+    path: Assets/Scenes/Level3Congrats.unity
+    guid: f1237671894b1a44db5125a074d38e85
+  - enabled: 1
+    path: Assets/Scenes/Epilogue1.unity
+    guid: 0f7717b67de5ba44fa49303587c30426
+  - enabled: 1
+    path: Assets/Scenes/Epilogue2.unity
+    guid: a1d48f2f555452e43b7e11b2af985330
+  - enabled: 1
+    path: Assets/Scenes/Epilogue3.unity
+    guid: be47cc23418c88249891807f420a5525
+  - enabled: 1
+    path: Assets/Scenes/Epilogue4.unity
+    guid: efe690525bc68924189f32a049a3e3d6
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6ef789ec53a17c349bfb0990877ed501
   m_configObjects: {}

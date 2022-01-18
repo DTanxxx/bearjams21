@@ -25,6 +25,10 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
         Move();
         Die();
     }
